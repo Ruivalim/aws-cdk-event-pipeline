@@ -1,0 +1,50 @@
+{
+  "name": "aws-cdk-event-pipeline",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Event ingestion pipeline on AWS: a reliable queue, a worker with dead-letter handling, and the alarms that watch both",
+  "bin": {
+    "aws-cdk-event-pipeline": "bin/app.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "cdk": "cdk",
+    "synth": "cdk synth",
+    "diff": "cdk diff",
+    "deploy": "cdk deploy --all",
+    "destroy": "cdk destroy --all",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "fmt": "prettier --write .",
+    "fmt:check": "prettier --check .",
+    "check": "npm run fmt:check && npm run lint && npm run build && npm test"
+  },
+  "devDependencies": {
+    "@aws-sdk/client-dynamodb": "^3.699.0",
+    "@aws-sdk/client-sqs": "^3.699.0",
+    "@aws-sdk/lib-dynamodb": "^3.699.0",
+    "@eslint/js": "^9.17.0",
+    "@types/aws-lambda": "^8.10.146",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.10.2",
+    "aws-cdk": "^2.173.0",
+    "aws-sdk-client-mock": "^4.1.0",
+    "esbuild": "^0.24.2",
+    "eslint": "^9.17.0",
+    "globals": "^15.14.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.4.2",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.18.1"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.173.0",
+    "constructs": "^10.4.2",
+    "source-map-support": "^0.5.21"
+  }
+}
